@@ -1,0 +1,22 @@
+{
+  "name": "FICOW",
+  "version": "0.1.0",
+  "summary": "A short description of FICOW.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ficow Shen/FICOW",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ficow Shen": "ficowshen@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Ficow Shen/FICOW.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "FICOW/Classes/**/*"
+}

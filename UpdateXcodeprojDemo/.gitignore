@@ -1,0 +1,85 @@
+
+# Project
+ipa/
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+.build
+DerivedData/
+upload_dsym_results
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Bitrise
+bitrise.yml
+.bundle/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+## Added Manually
+.DS_Store
+xcuserdata
+build
+*~
+Breakpoints_v2.xcbkptlist
+/SwiftSpecs/FailureDiffs/*
+Carthage/Build
+Carthage/Checkouts
+Cartfile.private
+Cartfile.local
+*.swp
+/Swift_*
+ruby/
+reports/
+
+*/Info.plist
+Cities.xcodeproj
+TKPlanner-iOS.xcodeproj
+*.xctestplan
+
+## Segment Typewriter
+node_modules
+App/Segment/*
+!App/Segment/plan.json
+Utilities/Segment/*
+!Utilities/Segment/plan.json
+package-lock.json
+

@@ -1,0 +1,6 @@
+framework module FICOW {
+  umbrella header "FICOW-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,110 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+use_frameworks!
+
+all_targets = ["CN-APP", "UK-APP", "US-APP"]
+$ficow_targets = []
+
+ficow_config_file = "ficow_enabled_targets.txt" # 配置文件的名称
+File.readlines(ficow_config_file).each do |name| # 按行读取文本
+  stripped_name = name.strip # strip是一个 Ruby 内置函数，用于移除字符串前后多余的空格
+  if !stripped_name.empty? # 如果文本不是空字符串
+    $ficow_targets.push(stripped_name) # 加到 FICOW 数组
+    puts "Added target #{stripped_name} to ficow_targets" # 打印日志，方便调试
+  end
+end
+
+all_targets.each do |name| # 遍历所有的 target 名称
+  target name do
+    if $ficow_targets.include?(name) # 文件中配置的 target 包含当前的 target 名称
+      pod 'FICOW', :path => './FICOW' # 引入 FICOW pod
+    end
+  end
+end
+
+
+def enableFICOWForTargets()
+  require 'xcodeproj' # 引入 xcodeproj 库
+  project_path = 'UpdateXcodeprojDemo.xcodeproj' # 项目文件名
+  project = Xcodeproj::Project.open(project_path)
+  condition = "FICOW_ON"
+  swift_condition_key = "SWIFT_ACTIVE_COMPILATION_CONDITIONS"
+  objc_conditon_key = "GCC_PREPROCESSOR_DEFINITIONS"
+  project.targets.each do |target|
+    # 添加 FICOW_ON
+    if $ficow_targets.include?(target.name)
+      target.build_configurations.each do |conf|
+        # swift
+        swift_condition_string = conf.build_settings[swift_condition_key] # 得到一个字符串值
+        unless swift_condition_string.nil? # 旧配置不为空
+          unless swift_condition_string.include?(condition)
+            conditions = []
+            swift_condition_string.split(' ', -1).each do |c|
+              stripped_condition = c.strip # 处理多余的空格
+              conditions.push(stripped_condition)
+            end
+            new_condition_string = array.push(condition).join(" ")
+            puts "[Added] swift_condition_string: #{new_condition_string}"
+            conf.build_settings[swift_condition_key] = new_condition_string
+          end
+          # objc
+          objc_condition_array = conf.build_settings[objc_conditon_key] # 得到一个数组值
+          unless objc_condition_array.include?(condition)
+            conf.build_settings[objc_conditon_key].push(condition)
+            #puts "[Added] objc_condition_array: #{conf.build_settings[objc_conditon_key]}"
+          end
+        end
+      end
+      # 去除 FICOW_ON
+    else
+      # swift
+      target.build_configurations.each do |conf|
+        swift_condition_string = conf.build_settings[swift_condition_key] # 得到一个字符串值
+        if !swift_condition_string.nil? && swift_condition_string.include?(condition)
+          conditions = []
+          swift_condition_string.split(' ', -1).each do |c|
+            stripped_condition = c.strip # 处理多余的空格
+            if stripped_condition != condition
+              conditions.push(stripped_condition)
+            end
+          end
+          puts "[Removed] swift_condition_string: #{new_condition_string}"
+        end
+        # objc
+        objc_condition_array = conf.build_settings[objc_conditon_key] # 得到一个数组值
+        if !objc_condition_array.nil? && objc_condition_array.include?(condition)
+          conf.build_settings[objc_conditon_key].delete(condition)
+          puts "[Removed] objc_condition_array: #{conf.build_settings[objc_conditon_key]}"
+        end
+      end
+    end
+  end
+  project.save() # 保存改动到 .xcodeproj 文件
+  puts "did enable FICOW for targets"
+end
+
+
+post_install do |installer|
+  unless $ficow_targets.empty?
+    enableFICOWForTargets()
+  end
+end
+
+
+#target 'UpdateXcodeprojDemo' do
+#  # Comment the next line if you don't want to use dynamic frameworks
+#  use_frameworks!
+#
+#  # Pods for UpdateXcodeprojDemo
+#
+#  target 'UpdateXcodeprojDemoTests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
+#
+#  target 'UpdateXcodeprojDemoUITests' do
+#    # Pods for testing
+#  end
+#
+#end
