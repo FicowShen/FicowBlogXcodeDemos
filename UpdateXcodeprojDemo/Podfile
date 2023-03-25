@@ -3,7 +3,7 @@
 
 use_frameworks!
 
-all_targets = ["CN-APP", "UK-APP", "US-APP"]
+all_targets = ["UpdateXcodeprojDemo", "CN-APP", "UK-APP", "US-APP"]
 $ficow_targets = []
 
 ficow_config_file = "ficow_enabled_targets.txt" # 配置文件的名称
@@ -11,7 +11,7 @@ File.readlines(ficow_config_file).each do |name| # 按行读取文本
   stripped_name = name.strip # strip是一个 Ruby 内置函数，用于移除字符串前后多余的空格
   if !stripped_name.empty? # 如果文本不是空字符串
     $ficow_targets.push(stripped_name) # 加到 FICOW 数组
-    puts "Added target #{stripped_name} to ficow_targets" # 打印日志，方便调试
+    puts "Found target #{stripped_name} in ficow_targets" # 打印日志，方便调试
   end
 end
 
@@ -32,27 +32,42 @@ def enableFICOWForTargets()
   swift_condition_key = "SWIFT_ACTIVE_COMPILATION_CONDITIONS"
   objc_conditon_key = "GCC_PREPROCESSOR_DEFINITIONS"
   project.targets.each do |target|
+    # puts "Started processing FICOW for target: #{target.name}"
     # 添加 FICOW_ON
     if $ficow_targets.include?(target.name)
       target.build_configurations.each do |conf|
         # swift
         swift_condition_string = conf.build_settings[swift_condition_key] # 得到一个字符串值
-        unless swift_condition_string.nil? # 旧配置不为空
+        puts "swift_condition_string: #{swift_condition_string}, target: #{target.name}, config: #{conf.name}"
+        if swift_condition_string.nil? # 旧配置为空
+          conf.build_settings[swift_condition_key] = condition
+          puts "[Added #{condition} for Swift - nil] swift_conditions: #{conf.build_settings[swift_condition_key]}, target: #{target.name}, config: #{conf.name}"
+        else
           unless swift_condition_string.include?(condition)
             conditions = []
             swift_condition_string.split(' ', -1).each do |c|
               stripped_condition = c.strip # 处理多余的空格
               conditions.push(stripped_condition)
             end
-            new_condition_string = array.push(condition).join(" ")
-            puts "[Added] swift_condition_string: #{new_condition_string}"
+            new_condition_string = conditions.push(condition).join(" ")
             conf.build_settings[swift_condition_key] = new_condition_string
+            puts "[Added #{condition} for Swift - String] swift_conditions: #{conf.build_settings[swift_condition_key]}, target: #{target.name}, config: #{conf.name}"
           end
-          # objc
-          objc_condition_array = conf.build_settings[objc_conditon_key] # 得到一个数组值
-          unless objc_condition_array.include?(condition)
+        end
+        # objc
+        objc_conditions = conf.build_settings[objc_conditon_key] # 可能的返回值：nil, 字符串(空字符串、单个元素)，数组（多个元素）
+#        puts "objc_conditions: #{objc_conditions}, class:#{objc_conditions.class}"
+        if objc_conditions.nil? # 旧配置为空
+          conf.build_settings[objc_conditon_key] = condition
+          puts "[Added #{condition} for ObjC - nil] objc_conditons: #{conf.build_settings[objc_conditon_key]}, target: #{target.name}, config: #{conf.name}"
+          # https://stackoverflow.com/a/15769829
+        elsif objc_conditions.is_a?(String) # 通常为 $(inherited)
+          conf.build_settings[objc_conditon_key] = [objc_conditions, condition]
+          puts "[Added #{condition} for ObjC - String] objc_conditons: #{conf.build_settings[objc_conditon_key]}, target: #{target.name}, config: #{conf.name}"
+        elsif objc_conditions.is_a?(Array)
+          unless objc_conditions.include?(condition)
             conf.build_settings[objc_conditon_key].push(condition)
-            #puts "[Added] objc_condition_array: #{conf.build_settings[objc_conditon_key]}"
+            puts "[Added #{condition} for ObjC - Array] objc_conditons: #{conf.build_settings[objc_conditon_key]}, target: #{target.name}, config: #{conf.name}"
           end
         end
       end
@@ -66,29 +81,45 @@ def enableFICOWForTargets()
           swift_condition_string.split(' ', -1).each do |c|
             stripped_condition = c.strip # 处理多余的空格
             if stripped_condition != condition
+#              puts "adding #{stripped_condition} to conditions"
               conditions.push(stripped_condition)
             end
           end
-          puts "[Removed] swift_condition_string: #{new_condition_string}"
+          new_condition_string = conditions.join(" ")
+          puts "[Removed #{condition} for Swift] swift_conditions: #{new_condition_string}, target: #{target.name}, config: #{conf.name}"
+          conf.build_settings[swift_condition_key] = new_condition_string
         end
         # objc
-        objc_condition_array = conf.build_settings[objc_conditon_key] # 得到一个数组值
-        if !objc_condition_array.nil? && objc_condition_array.include?(condition)
-          conf.build_settings[objc_conditon_key].delete(condition)
-          puts "[Removed] objc_condition_array: #{conf.build_settings[objc_conditon_key]}"
+        objc_conditions = conf.build_settings[objc_conditon_key] # 可能的返回值：nil, 字符串(空字符串、单个元素)，数组（多个元素）
+#        puts "objc_conditions: #{objc_conditions}, class:#{objc_conditions.class}"
+        unless objc_conditions.nil?
+          if objc_conditions.is_a?(String) && objc_conditions.strip == condition
+            conf.build_settings[objc_conditon_key] = ""
+            puts "[Removed #{condition} for ObjC - String] objc_conditons: #{conf.build_settings[objc_conditon_key]}, target: #{target.name}, config: #{conf.name}"
+          elsif objc_conditions.is_a?(Array) && objc_conditions.include?(condition)
+            if objc_conditions.length == 1
+              conf.build_settings[objc_conditon_key] = ""
+            elsif objc_conditions.length == 2
+              objc_conditions.delete(condition)
+              # puts "objc_conditions.first(): #{objc_conditions.first}"
+              conf.build_settings[objc_conditon_key] = objc_conditions.first
+            else
+              conf.build_settings[objc_conditon_key].delete(condition)
+            end
+            puts "[Removed #{condition} for ObjC - Array] objc_conditons: #{conf.build_settings[objc_conditon_key]}, target: #{target.name}, config: #{conf.name}"
+          end
         end
       end
     end
   end
+
   project.save() # 保存改动到 .xcodeproj 文件
-  puts "did enable FICOW for targets"
+  puts "Finished processing FICOW for targets"
 end
 
 
 post_install do |installer|
-  unless $ficow_targets.empty?
-    enableFICOWForTargets()
-  end
+  enableFICOWForTargets()
 end
 
 

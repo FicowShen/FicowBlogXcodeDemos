@@ -12,6 +12,9 @@ struct CN_APPApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            #if FICOW_ON
+            Color.red
+            #endif
         }
     }
 }
