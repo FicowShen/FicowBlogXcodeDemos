@@ -12,9 +12,14 @@ struct CN_APPApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            #if FICOW_ON
-            Color.red
-            #endif
+#if FICOW_ON
+            addFICOWONView()
+#endif
         }
+    }
+
+    func addFICOWONView() -> some View {
+        CNViewController().viewDidLoad()
+        return Color.red
     }
 }

@@ -38,7 +38,7 @@ def enableFICOWForTargets()
       target.build_configurations.each do |conf|
         # swift
         swift_condition_string = conf.build_settings[swift_condition_key] # 得到一个字符串值
-        puts "swift_condition_string: #{swift_condition_string}, target: #{target.name}, config: #{conf.name}"
+#        puts "swift_condition_string: #{swift_condition_string}, class:#{swift_condition_string.class}, target: #{target.name}, config: #{conf.name}"
         if swift_condition_string.nil? # 旧配置为空
           conf.build_settings[swift_condition_key] = condition
           puts "[Added #{condition} for Swift - nil] swift_conditions: #{conf.build_settings[swift_condition_key]}, target: #{target.name}, config: #{conf.name}"
