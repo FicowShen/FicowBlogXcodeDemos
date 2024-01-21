@@ -43,19 +43,20 @@ struct ContentView: View {
     }
 
     func startActivity() {
-        ActivityController.shared.startLiveActivity(attributes: .init(id: "ficow test"), initialState: .init(text: "S", endTime: .init(timeIntervalSinceNow: 10)), staleDate: nil, relevanceScore: 50)
+        ActivityController.shared.startLiveActivity(attributes: .init(id: "ficow test"), initialState: .init(text: "Start", endTime: .init(timeIntervalSinceNow: 10)), staleDate: nil, relevanceScore: 50)
     }
 
     func updateActivity() {
         Task { @MainActor in
-            try await ActivityController.shared.updateActivity(state: .init(text: paused ? "P" : "U", pauseTime: paused ? .now : nil), staleDate: .init(timeIntervalSinceNow: 10), alert: .some((title: "alert title", body: "body")))
+            try await Task.sleep(for: .seconds(2))
+            try await ActivityController.shared.updateActivity(state: .init(text: paused ? "Pause" : "Update", pauseTime: paused ? .now : nil), staleDate: .init(timeIntervalSinceNow: 10), alert: .some((title: "alert title", body: "body")))
             paused.toggle()
         }
     }
 
     func stopActivity() {
         ActivityController.shared.endActivity(
-            finalState: .init(text: "E"),
+            finalState: .init(text: "End"),
             dismissalPolicy: .immediate
         )
     }

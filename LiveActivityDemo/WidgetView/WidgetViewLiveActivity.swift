@@ -2,12 +2,32 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
+var startTime = Date.now
+var endTime = Date.now.addingTimeInterval(200)
+var showCountdownItems = false
+
 struct WidgetViewLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: LiveActivityAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
                 Text("Hello \(context.state.text)")
+                if showCountdownItems {
+                    HStack {
+                        ProgressView(
+                            timerInterval: startTime...endTime,
+                            countsDown: true,
+                            label: { EmptyView() },
+                            currentValueLabel: { EmptyView() }
+                        )
+                        .tint(Color.red)
+                        .progressViewStyle(.circular)
+                        Text(timerInterval: startTime...endTime,
+                             pauseTime: context.state.pauseTime,
+                             countsDown: true,
+                             showsHours: false)
+                    }
+                }
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)

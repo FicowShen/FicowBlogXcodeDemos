@@ -7,12 +7,25 @@
 		<key>LiveActivityDemo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>WidgetViewExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6A31BA512B5CA07D005AC8C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A31BA892B5CBF1A005AC8C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
