@@ -12,4 +12,7 @@ import Foundation
 class RootViewState {
     var text = "Initial text"
     var log = ""
+
+    @ObservationIgnored // Note: value changes won't trigger UI updates
+    var ignoredField = ""
 }

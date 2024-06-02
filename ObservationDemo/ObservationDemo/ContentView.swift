@@ -17,6 +17,8 @@ struct ContentView: View {
             VStack {
                 Text(viewState.text)
                 Divider()
+                EditView(viewState: viewState)
+                Divider()
                 Text(viewState.log)
             }
         }
@@ -25,6 +27,14 @@ struct ContentView: View {
         }
     }
 
+}
+
+struct EditView: View {
+    @Bindable var viewState: RootViewState // Note: binding from observable macro
+
+    var body: some View {
+        TextField("Update text", text: $viewState.text)
+    }
 }
 
 #Preview {
