@@ -1,0 +1,36 @@
+@startuml
+
+title 非 SwiftUI View 类型如何观察 @Observable 所标记类型的值的变化？ —— Ficow Shen
+
+autonumber
+
+participant RootViewModel as vm
+participant RootViewState as vs
+participant ContentView as view
+participant EditView as edit
+participant Observation as obsv
+participant AsyncStream as stream
+
+activate vm
+activate vs
+activate view
+activate edit
+activate obsv
+activate stream
+
+
+vm -> stream: observeOnMainActor
+stream -> obsv: withObservationTracking
+note right: 通过ObservationTracked宏，记录现在的值，并观察值的变化
+view -> vm: updateText
+note right: task回调
+vm -> vs: viewState.text = "Updated text"
+note right: 更新值
+
+vs -> obsv: withMutation
+obsv -> stream: yield
+stream -> vm: viewState.log = "Detect new text: \(text)"
+note right: 获取监听到的新值
+
+
+@enduml
