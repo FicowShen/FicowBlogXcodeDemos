@@ -2,15 +2,16 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/ficow/Library/Developer/Xcode/DerivedData/PackPodAsXCFrameworkDemo-csbedsjfcimnciayghqeljebsqor/Build/Intermediates.noindex/ArchiveIntermediates/FicowPod/InstallationBuildProductsLocation/Library/Frameworks/FicowPod.framework/FicowPod'
 relocations:
-  - { offsetInCU: 0x34, offset: 0x538D4, size: 0x8, addend: 0x0, symName: _FicowPodVersionString, symObjAddr: 0x0, symBinAddr: 0x4FE0, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x53909, size: 0x8, addend: 0x0, symName: _FicowPodVersionNumber, symObjAddr: 0x28, symBinAddr: 0x5008, symSize: 0x0 }
-  - { offsetInCU: 0x27, offset: 0x53946, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x4 }
-  - { offsetInCU: 0x46, offset: 0x53965, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x4 }
-  - { offsetInCU: 0x65, offset: 0x53984, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVMa', symObjAddr: 0x4, symBinAddr: 0x4004, symSize: 0x10 }
-  - { offsetInCU: 0x27, offset: 0x53A46, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZ', symObjAddr: 0x0, symBinAddr: 0x4014, symSize: 0x80 }
-  - { offsetInCU: 0x6C, offset: 0x53A8B, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZ', symObjAddr: 0x0, symBinAddr: 0x4014, symSize: 0x80 }
-  - { offsetInCU: 0xEB, offset: 0x53B0A, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfd', symObjAddr: 0xC0, symBinAddr: 0x40D4, symSize: 0x8 }
-  - { offsetInCU: 0x11A, offset: 0x53B39, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfD', symObjAddr: 0xC8, symBinAddr: 0x40DC, symSize: 0x10 }
-  - { offsetInCU: 0x14A, offset: 0x53B69, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0x80, symBinAddr: 0x4094, symSize: 0x40 }
-  - { offsetInCU: 0x15E, offset: 0x53B7D, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCMa', symObjAddr: 0xD8, symBinAddr: 0x40EC, symSize: 0x20 }
+  - { offsetInCU: 0x34, offset: 0x53B5C, size: 0x8, addend: 0x0, symName: _FicowPodVersionString, symObjAddr: 0x0, symBinAddr: 0x5100, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x53B91, size: 0x8, addend: 0x0, symName: _FicowPodVersionNumber, symObjAddr: 0x28, symBinAddr: 0x5128, symSize: 0x0 }
+  - { offsetInCU: 0x27, offset: 0x53BCE, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x4 }
+  - { offsetInCU: 0x46, offset: 0x53BED, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x4 }
+  - { offsetInCU: 0x65, offset: 0x53C0C, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVMa', symObjAddr: 0x4, symBinAddr: 0x4004, symSize: 0x10 }
+  - { offsetInCU: 0x6C, offset: 0x53D63, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZ', symObjAddr: 0x0, symBinAddr: 0x4014, symSize: 0xB8 }
+  - { offsetInCU: 0x131, offset: 0x53E28, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZy7SnapKit15ConstraintMakerCXEfU_', symObjAddr: 0xB8, symBinAddr: 0x40CC, symSize: 0x98 }
+  - { offsetInCU: 0x15D, offset: 0x53E54, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfd', symObjAddr: 0x190, symBinAddr: 0x41A4, symSize: 0x8 }
+  - { offsetInCU: 0x18C, offset: 0x53E83, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfD', symObjAddr: 0x198, symBinAddr: 0x41AC, symSize: 0x10 }
+  - { offsetInCU: 0x1BC, offset: 0x53EB3, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0x150, symBinAddr: 0x4164, symSize: 0x40 }
+  - { offsetInCU: 0x1D0, offset: 0x53EC7, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCMa', symObjAddr: 0x1A8, symBinAddr: 0x41BC, symSize: 0x20 }
+  - { offsetInCU: 0x1E4, offset: 0x53EDB, size: 0x8, addend: 0x0, symName: ___swift_destroy_boxed_opaque_existential_1, symObjAddr: 0x1D4, symBinAddr: 0x41E8, symSize: 0x20 }
 ...

@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		5T5Md+ZBGPAlpgrX1/18UsENflA=
+		KeJTXQpR6wBhES7N1pdUYz9tzII=
 		</data>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		bzsvi62ISJRQuMeLz3WQ7IYF2+E=
+		IoPuXix1CeOOT07OXKlJmKlayJQ=
 		</data>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bzsvi62ISJRQuMeLz3WQ7IYF2+E=
+		IoPuXix1CeOOT07OXKlJmKlayJQ=
 		</data>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		d9sPvE5dpaG2bxEJXcjJvk1UBVU=
+		5HerfCZHj0lLlQX81yrLPUUOvpM=
 		</data>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		5T5Md+ZBGPAlpgrX1/18UsENflA=
+		KeJTXQpR6wBhES7N1pdUYz9tzII=
 		</data>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		D3xj9bb4PSRTYjzzVH1auoJ8HHQ=
+		bBn6zB/1HXdDKu6TV+6/Ld70vGQ=
 		</data>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		D3xj9bb4PSRTYjzzVH1auoJ8HHQ=
+		bBn6zB/1HXdDKu6TV+6/Ld70vGQ=
 		</data>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RzR5vOJdfd6XHSMTwfohtjTr24I=
+		PSf8mNVRvGy57whRu+/kumaMTC8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S8jTzL+v18xNu/mWP8yHmHiZtiXLMC9YbyWmLWpqHBg=
+			OgiAIRoRKtmVCxO3yAtN1V23Yk63wu/7BYXVdGvSLLI=
 			</data>
 		</dict>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GeUpu35iNgILouBJ8rHccJ416X6i/nChT0wJfX26GtY=
+			2sODvy/+H6w+u8EYtSFWtJFzYEZ6UHQ5lxN3hNfitHI=
 			</data>
 		</dict>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GeUpu35iNgILouBJ8rHccJ416X6i/nChT0wJfX26GtY=
+			2sODvy/+H6w+u8EYtSFWtJFzYEZ6UHQ5lxN3hNfitHI=
 			</data>
 		</dict>
 		<key>Modules/FicowPod.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eCRDfHUaw76SFGWo5MuM1DtU7X3QWqKMEcF8fTpEIV8=
+			UmaphzKuB4XibCesS9TrSuRmdmOJlTRQRI+LReFyzEM=
 			</data>
 		</dict>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S8jTzL+v18xNu/mWP8yHmHiZtiXLMC9YbyWmLWpqHBg=
+			OgiAIRoRKtmVCxO3yAtN1V23Yk63wu/7BYXVdGvSLLI=
 			</data>
 		</dict>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ECecns7XUmgulqJcXIKi8Mg1VR+/AucKLHPo9qOr7k=
+			QgFnrcMEnHmmPpvl3x1LpknmGXnUvNN3ogBiPFMRfao=
 			</data>
 		</dict>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ECecns7XUmgulqJcXIKi8Mg1VR+/AucKLHPo9qOr7k=
+			QgFnrcMEnHmmPpvl3x1LpknmGXnUvNN3ogBiPFMRfao=
 			</data>
 		</dict>
 		<key>Modules/FicowPod.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IQXjXD/GRmiyaxlKPPoRYXpLQdPIQH1RMOcmhlhepzc=
+			7EECos6Rr2eafe+I0KTiDA8if3ARDhUDxwRdW50/+Uk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
