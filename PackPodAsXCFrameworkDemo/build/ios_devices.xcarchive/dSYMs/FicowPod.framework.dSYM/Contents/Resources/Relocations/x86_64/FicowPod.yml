@@ -1,0 +1,16 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/ficow/Library/Developer/Xcode/DerivedData/PackPodAsXCFrameworkDemo-csbedsjfcimnciayghqeljebsqor/Build/Intermediates.noindex/ArchiveIntermediates/FicowPod/InstallationBuildProductsLocation/Library/Frameworks/FicowPod.framework/FicowPod'
+relocations:
+  - { offsetInCU: 0x34, offset: 0x54964, size: 0x8, addend: 0x0, symName: _FicowPodVersionString, symObjAddr: 0x0, symBinAddr: 0x3CA0, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x54999, size: 0x8, addend: 0x0, symName: _FicowPodVersionNumber, symObjAddr: 0x28, symBinAddr: 0x3CC8, symSize: 0x0 }
+  - { offsetInCU: 0x27, offset: 0x549D6, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x2C10, symSize: 0x10 }
+  - { offsetInCU: 0x46, offset: 0x549F5, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x2C10, symSize: 0x10 }
+  - { offsetInCU: 0x65, offset: 0x54A14, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVMa', symObjAddr: 0x10, symBinAddr: 0x2C20, symSize: 0xA }
+  - { offsetInCU: 0x27, offset: 0x54AD6, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZ', symObjAddr: 0x0, symBinAddr: 0x2C30, symSize: 0xA0 }
+  - { offsetInCU: 0x6C, offset: 0x54B1B, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZ', symObjAddr: 0x0, symBinAddr: 0x2C30, symSize: 0xA0 }
+  - { offsetInCU: 0xEB, offset: 0x54B9A, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfd', symObjAddr: 0xE0, symBinAddr: 0x2D10, symSize: 0x10 }
+  - { offsetInCU: 0x118, offset: 0x54BC7, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfD', symObjAddr: 0xF0, symBinAddr: 0x2D20, symSize: 0x20 }
+  - { offsetInCU: 0x146, offset: 0x54BF5, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0xA0, symBinAddr: 0x2CD0, symSize: 0x40 }
+  - { offsetInCU: 0x15A, offset: 0x54C09, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCMa', symObjAddr: 0x110, symBinAddr: 0x2D40, symSize: 0x20 }
+...

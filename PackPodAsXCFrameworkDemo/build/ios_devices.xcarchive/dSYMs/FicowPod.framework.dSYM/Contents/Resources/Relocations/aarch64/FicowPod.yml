@@ -1,0 +1,16 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ficow/Library/Developer/Xcode/DerivedData/PackPodAsXCFrameworkDemo-csbedsjfcimnciayghqeljebsqor/Build/Intermediates.noindex/ArchiveIntermediates/FicowPod/InstallationBuildProductsLocation/Library/Frameworks/FicowPod.framework/FicowPod'
+relocations:
+  - { offsetInCU: 0x34, offset: 0x53DD1, size: 0x8, addend: 0x0, symName: _FicowPodVersionString, symObjAddr: 0x0, symBinAddr: 0x3C80, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x53E06, size: 0x8, addend: 0x0, symName: _FicowPodVersionNumber, symObjAddr: 0x28, symBinAddr: 0x3CA8, symSize: 0x0 }
+  - { offsetInCU: 0x27, offset: 0x53E43, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x2C60, symSize: 0x4 }
+  - { offsetInCU: 0x46, offset: 0x53E62, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVACycfC', symObjAddr: 0x0, symBinAddr: 0x2C60, symSize: 0x4 }
+  - { offsetInCU: 0x65, offset: 0x53E81, size: 0x8, addend: 0x0, symName: '_$s8FicowPod11AnotherTypeVMa', symObjAddr: 0x4, symBinAddr: 0x2C64, symSize: 0x10 }
+  - { offsetInCU: 0x27, offset: 0x53F43, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZ', symObjAddr: 0x0, symBinAddr: 0x2C74, symSize: 0x80 }
+  - { offsetInCU: 0x6C, offset: 0x53F88, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryC5helloyyFZ', symObjAddr: 0x0, symBinAddr: 0x2C74, symSize: 0x80 }
+  - { offsetInCU: 0xEB, offset: 0x54007, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfd', symObjAddr: 0xC0, symBinAddr: 0x2D34, symSize: 0x8 }
+  - { offsetInCU: 0x11A, offset: 0x54036, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCfD', symObjAddr: 0xC8, symBinAddr: 0x2D3C, symSize: 0x10 }
+  - { offsetInCU: 0x14A, offset: 0x54066, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0x80, symBinAddr: 0x2CF4, symSize: 0x40 }
+  - { offsetInCU: 0x15E, offset: 0x5407A, size: 0x8, addend: 0x0, symName: '_$s8FicowPod0aB5EntryCMa', symObjAddr: 0xD8, symBinAddr: 0x2D4C, symSize: 0x20 }
+...

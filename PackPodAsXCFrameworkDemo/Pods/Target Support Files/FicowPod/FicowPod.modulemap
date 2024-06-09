@@ -1,0 +1,6 @@
+framework module FicowPod {
+  umbrella header "FicowPod-umbrella.h"
+
+  export *
+  module * { export * }
+}

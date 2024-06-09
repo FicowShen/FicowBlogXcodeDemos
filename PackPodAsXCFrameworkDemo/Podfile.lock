@@ -1,0 +1,23 @@
+PODS:
+  - FicowPod (0.0.1):
+    - SnapKit (~> 5.0.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - FicowPod (from `./FicowPod`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  FicowPod:
+    :path: "./FicowPod"
+
+SPEC CHECKSUMS:
+  FicowPod: f8e2bdc8cb5e6128543af8dcafaec34a6759455b
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 2068d1c8d6453bfbdc4734d076845412f49557a4
+
+COCOAPODS: 1.15.2

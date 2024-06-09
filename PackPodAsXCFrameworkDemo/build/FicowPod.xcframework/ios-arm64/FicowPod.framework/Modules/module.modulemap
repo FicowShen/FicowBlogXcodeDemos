@@ -1,0 +1,11 @@
+framework module FicowPod {
+  umbrella header "FicowPod-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module FicowPod.Swift {
+  header "FicowPod-Swift.h"
+  requires objc
+}
