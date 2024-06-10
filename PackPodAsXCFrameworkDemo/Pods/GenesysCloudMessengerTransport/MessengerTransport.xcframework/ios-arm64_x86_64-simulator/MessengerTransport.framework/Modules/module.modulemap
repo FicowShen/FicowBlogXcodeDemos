@@ -1,0 +1,6 @@
+framework module MessengerTransport {
+    umbrella header "MessengerTransport.h"
+
+    export *
+    module * { export * }
+}

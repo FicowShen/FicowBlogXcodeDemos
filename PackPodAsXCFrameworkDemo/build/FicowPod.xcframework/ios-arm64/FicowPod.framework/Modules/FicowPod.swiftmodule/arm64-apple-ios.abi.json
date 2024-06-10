@@ -64,6 +64,13 @@
         "moduleName": "FicowPod"
       },
       {
+        "kind": "Import",
+        "name": "MessengerTransport",
+        "printedName": "MessengerTransport",
+        "declKind": "Import",
+        "moduleName": "FicowPod"
+      },
+      {
         "kind": "TypeDecl",
         "name": "FicowPodEntry",
         "printedName": "FicowPodEntry",
@@ -107,14 +114,42 @@
     {
       "filePath": "\/Users\/ficow\/Desktop\/Projects\/Ficow Projects\/FicowBlogXcodeDemos\/PackPodAsXCFrameworkDemo\/FicowPod\/Classes\/FicowPod.swift",
       "kind": "IntegerLiteral",
-      "offset": 179,
+      "offset": 205,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ficow\/Desktop\/Projects\/Ficow Projects\/FicowBlogXcodeDemos\/PackPodAsXCFrameworkDemo\/FicowPod\/Classes\/FicowPod.swift",
       "kind": "StringLiteral",
-      "offset": 228,
+      "offset": 316,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ficow\/Desktop\/Projects\/Ficow Projects\/FicowBlogXcodeDemos\/PackPodAsXCFrameworkDemo\/FicowPod\/Classes\/FicowPod.swift",
+      "kind": "StringLiteral",
+      "offset": 328,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ficow\/Desktop\/Projects\/Ficow Projects\/FicowBlogXcodeDemos\/PackPodAsXCFrameworkDemo\/FicowPod\/Classes\/FicowPod.swift",
+      "kind": "BooleanLiteral",
+      "offset": 341,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ficow\/Desktop\/Projects\/Ficow Projects\/FicowBlogXcodeDemos\/PackPodAsXCFrameworkDemo\/FicowPod\/Classes\/FicowPod.swift",
+      "kind": "IntegerLiteral",
+      "offset": 377,
+      "length": 3,
+      "value": "690"
+    },
+    {
+      "filePath": "\/Users\/ficow\/Desktop\/Projects\/Ficow Projects\/FicowBlogXcodeDemos\/PackPodAsXCFrameworkDemo\/FicowPod\/Classes\/FicowPod.swift",
+      "kind": "StringLiteral",
+      "offset": 429,
       "length": 22,
       "value": "\"Hello from FicowPod!\""
     }

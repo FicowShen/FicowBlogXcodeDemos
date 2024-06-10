@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 @_exported import FicowPod
 import Foundation
+import MessengerTransport
 import SnapKit
 import Swift
 import UIKit

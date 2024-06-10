@@ -16,7 +16,9 @@
 		6A4F2D702C15A1A000B17B28 /* XCFrameworkConsumerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F2D6F2C15A1A000B17B28 /* XCFrameworkConsumerDemoTests.swift */; };
 		6A4F2D7A2C15A1A000B17B28 /* XCFrameworkConsumerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F2D792C15A1A000B17B28 /* XCFrameworkConsumerDemoUITests.swift */; };
 		6A4F2D7C2C15A1A000B17B28 /* XCFrameworkConsumerDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4F2D7B2C15A1A000B17B28 /* XCFrameworkConsumerDemoUITestsLaunchTests.swift */; };
-		6A4F2D952C15A24000B17B28 /* FicowPod.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F2D942C15A24000B17B28 /* FicowPod.xcframework */; };
+		6A4F2DA12C16ED6E00B17B28 /* SnapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F2D9E2C16ED6E00B17B28 /* SnapKit.xcframework */; };
+		6A4F2DA22C16ED6E00B17B28 /* FicowPod.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F2D9F2C16ED6E00B17B28 /* FicowPod.xcframework */; };
+		6A4F2DA32C16ED6E00B17B28 /* MessengerTransport.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F2DA02C16ED6E00B17B28 /* MessengerTransport.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,9 @@
 		6A4F2D752C15A1A000B17B28 /* XCFrameworkConsumerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCFrameworkConsumerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A4F2D792C15A1A000B17B28 /* XCFrameworkConsumerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCFrameworkConsumerDemoUITests.swift; sourceTree = "<group>"; };
 		6A4F2D7B2C15A1A000B17B28 /* XCFrameworkConsumerDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCFrameworkConsumerDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6A4F2D942C15A24000B17B28 /* FicowPod.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FicowPod.xcframework; path = ../build/FicowPod.xcframework; sourceTree = "<group>"; };
+		6A4F2D9E2C16ED6E00B17B28 /* SnapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SnapKit.xcframework; path = ../build/SnapKit.xcframework; sourceTree = "<group>"; };
+		6A4F2D9F2C16ED6E00B17B28 /* FicowPod.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FicowPod.xcframework; path = ../build/FicowPod.xcframework; sourceTree = "<group>"; };
+		6A4F2DA02C16ED6E00B17B28 /* MessengerTransport.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MessengerTransport.xcframework; path = ../build/MessengerTransport.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A4F2D952C15A24000B17B28 /* FicowPod.xcframework in Frameworks */,
+				6A4F2DA22C16ED6E00B17B28 /* FicowPod.xcframework in Frameworks */,
+				6A4F2DA32C16ED6E00B17B28 /* MessengerTransport.xcframework in Frameworks */,
+				6A4F2DA12C16ED6E00B17B28 /* SnapKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +87,9 @@
 		6A4F2D4D2C15A19D00B17B28 = {
 			isa = PBXGroup;
 			children = (
-				6A4F2D942C15A24000B17B28 /* FicowPod.xcframework */,
+				6A4F2D9F2C16ED6E00B17B28 /* FicowPod.xcframework */,
+				6A4F2DA02C16ED6E00B17B28 /* MessengerTransport.xcframework */,
+				6A4F2D9E2C16ED6E00B17B28 /* SnapKit.xcframework */,
 				6A4F2D582C15A19D00B17B28 /* XCFrameworkConsumerDemo */,
 				6A4F2D6E2C15A1A000B17B28 /* XCFrameworkConsumerDemoTests */,
 				6A4F2D782C15A1A000B17B28 /* XCFrameworkConsumerDemoUITests */,

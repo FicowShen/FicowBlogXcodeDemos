@@ -18,7 +18,10 @@
   "source_files": "Classes/*.swift",
   "dependencies": {
     "SnapKit": [
-      "~> 5.0.0"
+      "~> 5.7.0"
+    ],
+    "GenesysCloudMessengerTransport": [
+      "2.7.2"
     ]
   },
   "pod_target_xcconfig": {

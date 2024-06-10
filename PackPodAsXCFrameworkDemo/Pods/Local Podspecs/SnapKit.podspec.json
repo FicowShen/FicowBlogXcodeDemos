@@ -1,0 +1,22 @@
+{
+  "name": "SnapKit",
+  "version": "5.7.0",
+  "summary": "Wrapped SnapKit from https://github.com/SnapKit/SnapKit",
+  "description": "https://github.com/SnapKit/SnapKit",
+  "homepage": "https://github.com/SnapKit/SnapKit",
+  "license": "MIT",
+  "authors": {
+    "SnapKit": "https://github.com/SnapKit/SnapKit"
+  },
+  "platforms": {
+    "ios": "14.0"
+  },
+  "source": {
+    "git": "https://github.com/SnapKit/SnapKit",
+    "branch": "develop"
+  },
+  "source_files": "Sources/*.swift",
+  "pod_target_xcconfig": {
+    "BUILD_LIBRARY_FOR_DISTRIBUTION": "YES"
+  }
+}

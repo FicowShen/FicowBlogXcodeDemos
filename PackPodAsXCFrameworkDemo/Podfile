@@ -8,6 +8,7 @@ target 'PackPodAsXCFrameworkDemo' do
 
   # Pods for PackPodAsXCFrameworkDemo
 
+  pod 'SnapKit', :podspec => './SnapKit/SnapKit.podspec'
   pod 'FicowPod', :path => './FicowPod'
 
 end

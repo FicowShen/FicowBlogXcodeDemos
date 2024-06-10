@@ -1,23 +1,34 @@
 PODS:
   - FicowPod (0.0.1):
-    - SnapKit (~> 5.0.0)
-  - SnapKit (5.0.1)
+    - GenesysCloudMessengerTransport (= 2.7.2)
+    - SnapKit (~> 5.7.0)
+  - GenesysCloudMessengerTransport (2.7.2)
+  - SnapKit (5.7.0)
 
 DEPENDENCIES:
   - FicowPod (from `./FicowPod`)
+  - SnapKit (from `./SnapKit/SnapKit.podspec`)
 
 SPEC REPOS:
   trunk:
-    - SnapKit
+    - GenesysCloudMessengerTransport
 
 EXTERNAL SOURCES:
   FicowPod:
     :path: "./FicowPod"
+  SnapKit:
+    :podspec: "./SnapKit/SnapKit.podspec"
+
+CHECKOUT OPTIONS:
+  SnapKit:
+    :commit: 2842e6e84e82eb9a8dac0100ca90d9444b0307f4
+    :git: https://github.com/SnapKit/SnapKit
 
 SPEC CHECKSUMS:
-  FicowPod: f8e2bdc8cb5e6128543af8dcafaec34a6759455b
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  FicowPod: 35f5fe7814bde38a7b4a70da38805c7196991bd0
+  GenesysCloudMessengerTransport: d0ef0e3a858b1928354327185169f66f4fa38422
+  SnapKit: 788f5bdbca52d8e6521af5f75cc84d6a2d15e4d5
 
-PODFILE CHECKSUM: 2068d1c8d6453bfbdc4734d076845412f49557a4
+PODFILE CHECKSUM: befa5f8d3330da2914ab9af71336def6cc5ba495
 
 COCOAPODS: 1.15.2

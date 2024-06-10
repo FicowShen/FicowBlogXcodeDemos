@@ -137,7 +137,11 @@ The short description of FicowPod.
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-  spec.dependency "SnapKit", "~> 5.0.0"
+  # https://github.com/FicowShen/SnapKit
+  spec.dependency "SnapKit", "~> 5.7.0"
+
+  # https://github.com/MyPureCloud/genesys-messenger-transport-mobile-sdk
+  spec.dependency "GenesysCloudMessengerTransport", "2.7.2"
 
   spec.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES', # keep ABI stable
